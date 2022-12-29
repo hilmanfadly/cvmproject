@@ -1,7 +1,50 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-  <head>
+  <head> 
+    <style>
+      .col2{
+        background-color: #25628D;
+      }
+      .mb-1{
+        background-color: #094067;
+        color: #FFFFFF;
+      }
+      .footer1{
+        color: #FFFFFF;
+      }
+      a:link{
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+      a:hover{
+        color #FFFFFF;
+        text-decoration: underline;
+      }
+      a:active {
+        color #FFFFFF;
+      }
+      a:visited {
+        color #FFFFFF;
+      }
+      p {
+        display: block;
+        padding: 20px;
+      }
+      .column1{
+        background-color: #25628D;
+      }
+      .column2{
+        background-color: #25628D;
+      }
+      .column3{
+        background-color: #25628D;
+      }
+      .row1{
+        padding: 0px;
+       
+      }
+    </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +59,8 @@
         <!--<a class="navbar-brand" href="#">UMN Pictures</a>-->
         <img src="images/umnP" alt"Logo UMN Pictures"/>
       </div>
+     
+
 
     {% block content %}
     
@@ -37,4 +82,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
   </body>
+
+  <div class="row row1">
+  <div class="col-sm-4 column1">
+      <P style="color: white;"><b>My Account</b></br>
+        <a href="insert url" style="color:#FFFFFF">Sign In </a></br>
+        <a href="insert url" style="color:#FFFFFF">Sign Up</a></br>
+        <a href="insert url" style="color:#FFFFFF">Application Status</a>
+      </P>
+      <!--  <footer class="my-5 pt-5 footer1">
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+     </footer>-->
+  </div>
+  <div class="col-sm-4 column2">
+    <P style="color: white;"><b>About</b></br>
+      <a href="insert url" style="color:#FFFFFF">Our Story </a></br>
+      <a href="insert url" style="color:#FFFFFF">Company Backround</a>
+    </P>
+  </div>
+  <div class="col-sm-4 column3"> 
+    <P style="color: white;"><b>Follow Us</b></br>
+      <a href="insert url" style="color:#FFFFFF">Facebook </a>
+      <a href="insert url" style="color:#FFFFFF">Instagram</a>
+      <a href="insert url" style="color:#FFFFFF">Twitter</a>
+      <a href="insert url" style="color:#FFFFFF">Linked In</a>
+    </P>
+  </div>
+  <p class="mb-1 text-center">&copy; 123 UI/UX Team Design UMN</p>
+</div>
 </html>

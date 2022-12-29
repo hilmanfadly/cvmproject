@@ -13,14 +13,14 @@ def index(request):
       data3 = request.POST['phone'],
       data4 = request.POST['email'],
       data5 = request.POST['address'],
-      data6 = request.POST['skills'],
-      data7 = request.POST['langguages'],
+      data6 = request.POST['langguages'],
+      data7 = request.POST['skills'],
       data8 = request.POST['AboutMe'],
       data9 = request.POST['education'],
       data10 = request.POST['exp'],
 
      
-      newjobapply = JA(first_name= data1, last_name=data2,phone_number=data3,email=data4,current_location=data5,skills=data6,langguage=data7,about_me=data8,education=data9,experience=data10)
+      newjobapply = JA(first_name= data1, last_name=data2,phone_number=data3,email=data4,current_location=data5,langguage=data6, skills=data7,about_me=data8,education=data9,experience=data10)
       newjobapply.save()
       
    return render(request, 'JobApply/JA.html')

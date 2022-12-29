@@ -46,15 +46,19 @@
       .line{
         background-color: #C4C4C4;
         border 2px solid;
-        margin: 20px;
-        padding: 5px;
+        margin: 2px;
+        padding: 3px;
         
+    }
+    .container{
+      font-family: Verdana, sans-serif;
+      margin-bottom: 100px;
     }
     .container2{
         background-color: #D8EEFE;
-        border 2px solid;
+        border-style: solid;
         margin: auto;
-        padding: 10px;
+        padding: 20px;
         border-radius: 25px;
     }
     .borderJT{
@@ -63,6 +67,9 @@
         margin: auto;
         padding: 10px;
         border-radius: 25px;
+        display: block;
+        width: 50%;
+        font-family: Verdana, sans-serif;
     }
     .col-sm-6{
         color: #094067
@@ -75,12 +82,19 @@
     }
     .b1{
       background-color: #CB0000;
-      margin-left: 350px;
       border-radius: 15px;
+      font-size: 18px;
+      color: #FFFFFF;
+      padding: 12px;
+      margin: 4px;
     }
     .b2{
       background-color: #00A538;
       border-radius: 15px;
+      font-size: 18px;
+      color: #FFFFFF;
+      padding: 12px;
+      margin: 4px;
     }
   
     </style>
@@ -94,7 +108,7 @@
 <div class="container">
   <main>
     <div class="py-5 text-center">
-        <h1>Job Application</h1>
+        <h1><b>Job Application</b> </h1>
         <div class='line'>
         </div>
     </div>
@@ -113,16 +127,11 @@
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
               <input type="text" class="form-control" name="firstName" placeholder="John" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
             </div>
+
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Last name</label>
               <input type="text" class="form-control" name="lastName" placeholder="Doe" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
             </div>
 
             <div class="col-sm-6">
@@ -130,30 +139,16 @@
               <div class="input-group has-validation">
                 <span class="input-group-text">+62</span>
                 <input type="text" class="form-control" name="phone" placeholder="81838127" required>
-              <div class="invalid-feedback">
-                  Your phone number is required.
-                </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-              <input type="email" class="form-control" name="email" placeholder="Email@example.com">
-              <div class="invalid-feedback">
-                Please enter a valid email address
-              </div>
+              <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+              <input type="email" class="form-control" name="email" placeholder="Email@example.com" required>
             </div>
 
             <div class="col-sm-6">
               <label for="address" class="form-label">Current Location</label>
               <input type="text" class="form-control" name="address" placeholder="Jln.Mutiara, Gading Serpong" required>
-              <div class="invalid-feedback">
-                Please enter your current location
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <label for="skills" class="form-label">Current Skills <span class="text-muted">(Optional)</span></label>
-              <input type="text" class="form-control" name="skills"  placeholder="leadership experience, computer proficiency">
             </div>
 
             <div class="col-sm-6">
@@ -161,21 +156,27 @@
                 <input type="text" class="form-control" name="langguages"  placeholder="English, Bahasa">
               </div>
 
+              <div class="col-sm-6">
+                <label for="skills" class="form-label">Skills <span class="text-muted"></span></label>
+                <input style="height:100px" type="text" class="form-control" name="skills"  placeholder="leadership experience, computer proficiency" required>
+              </div>
+             
 
               <div class="col-sm-6">
                 <label for="AboutMe" class="form-label">About Me<span class="text-muted"></span></label>
-                <textarea id="AboutMe" name="AboutMe" rows="3" cols="45" placeholder="Lorem Ipsum"></textarea>
+                <input style="height:100px" type="text" class="form-control" name="AboutMe"  
+                placeholder="Lorem Ipsum is simply dummy text">
+               <!--<textarea id="AboutMe" name="AboutMe" rows="3" cols="45" placeholder="Lorem Ipsum"></textarea> -->
               </div>
 
               <div class="col-sm-6">
                 <label for="education" class="form-label">Education<span class="text-muted"></span></label>
-                <textarea id="education" name="education" rows="3" cols="45" placeholder="English, Bahasa"></textarea>
+                <input style="height:100px" type="text" class="form-control" name="education"  placeholder="Bachelors Degree in System information from UMN">
               </div>
 
               <div class="col-sm-6">
                 <label for="exp" class="form-label">Experience<span class="text-muted"></span></label>
-                <textarea id="exp" name="exp" rows="3" cols="45" 
-                placeholder="S1 System Information in UMN"></textarea>
+                <input style="height:100px" type="text" class="form-control" name="exp"  placeholder="1 Year Internship as Software Engineer at PT.Name">
               </div>
 
               
@@ -184,11 +185,13 @@
           </div>
 
           <hr class="my-4">
-          <div class="col-sm-6" >
-          <button class="w-90 btn btn-primary btn-lg b1" type="submit">Cancel</button>
-          </div>
-          <div class="col-sm-6">
-            <button class="w-90 btn btn-primary btn-lg b2" type="submit">Apply</button>
+         <!-- <div class="col-sm-6" >
+          <button class="button b1" type="submit">Cancel</button>
+          </div>-->
+          <div class="col text-center">
+            <button class="button b1" type="submit">Cancel</button>
+            <button class="button b2" type="submit">Apply</button>
+           <!--  <button class="w-100 btn btn-primary btn-lg b2" type="submit">Apply</button> -->
             </div>
           
         </form>
@@ -200,14 +203,7 @@
     </div>
   </main>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2017–2021 Company Name</p>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a href="#">Privacy</a></li>
-      <li class="list-inline-item"><a href="#">Terms</a></li>
-      <li class="list-inline-item"><a href="#">Support</a></li>
-    </ul>
-  </footer>
+
 </div>
 
 
