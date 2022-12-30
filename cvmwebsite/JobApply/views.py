@@ -18,9 +18,10 @@ def index(request):
       data8 = request.POST['AboutMe'],
       data9 = request.POST['education'],
       data10 = request.POST['exp'],
+      data11 = request.POST['img']
 
      
-      newjobapply = JA(first_name= data1, last_name=data2,phone_number=data3,email=data4,current_location=data5,langguage=data6, skills=data7,about_me=data8,education=data9,experience=data10)
+      newjobapply = JA(first_name= data1, last_name=data2,phone_number=data3,email=data4,current_location=data5,langguage=data6, skills=data7,about_me=data8,education=data9,experience=data10,img=data11)
       newjobapply.save()
       
    return render(request, 'JobApply/JA.html')

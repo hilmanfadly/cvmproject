@@ -80,21 +80,23 @@
     .borderJT{
         color: #FFFFFF
     }
-    .b1{
+    .btncancel{
       background-color: #CB0000;
       border-radius: 15px;
       font-size: 18px;
       color: #FFFFFF;
       padding: 12px;
       margin: 4px;
+      width: 150px;
     }
-    .b2{
+    .btnapply{
       background-color: #00A538;
       border-radius: 15px;
       font-size: 18px;
       color: #FFFFFF;
       padding: 12px;
       margin: 4px;
+      width: 150px;
     }
   
     </style>
@@ -124,76 +126,63 @@
         <form method="post">
           {% csrf_token %}
           <div class="row gy-3">
+
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
               <input type="text" class="form-control" name="firstName" placeholder="John" required>
-            </div>
-
-            <div class="col-sm-6">
+            
               <label for="lastName" class="form-label">Last name</label>
               <input type="text" class="form-control" name="lastName" placeholder="Doe" required>
-            </div>
-
-            <div class="col-sm-6">
+              
               <label for="phone" class="form-label">Phone Number</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">+62</span>
                 <input type="text" class="form-control" name="phone" placeholder="81838127" required>
               </div>
-            </div>
-            <div class="col-sm-6">
+
               <label for="email" class="form-label">Email <span class="text-muted"></span></label>
               <input type="email" class="form-control" name="email" placeholder="Email@example.com" required>
-            </div>
-
-            <div class="col-sm-6">
-              <label for="address" class="form-label">Current Location</label>
-              <input type="text" class="form-control" name="address" placeholder="Jln.Mutiara, Gading Serpong" required>
-            </div>
-
-            <div class="col-sm-6">
-                <label for="langguages" class="form-label">Langguages<span class="text-muted"></span></label>
-                <input type="text" class="form-control" name="langguages"  placeholder="English, Bahasa">
-              </div>
-
-              <div class="col-sm-6">
-                <label for="skills" class="form-label">Skills <span class="text-muted"></span></label>
-                <input style="height:100px" type="text" class="form-control" name="skills"  placeholder="leadership experience, computer proficiency" required>
-              </div>
-             
-
-              <div class="col-sm-6">
-                <label for="AboutMe" class="form-label">About Me<span class="text-muted"></span></label>
-                <input style="height:100px" type="text" class="form-control" name="AboutMe"  
-                placeholder="Lorem Ipsum is simply dummy text">
-               <!--<textarea id="AboutMe" name="AboutMe" rows="3" cols="45" placeholder="Lorem Ipsum"></textarea> -->
-              </div>
-
-              <div class="col-sm-6">
-                <label for="education" class="form-label">Education<span class="text-muted"></span></label>
-                <input style="height:100px" type="text" class="form-control" name="education"  placeholder="Bachelors Degree in System information from UMN">
-              </div>
-
-              <div class="col-sm-6">
-                <label for="exp" class="form-label">Experience<span class="text-muted"></span></label>
-                <input style="height:100px" type="text" class="form-control" name="exp"  placeholder="1 Year Internship as Software Engineer at PT.Name">
-              </div>
 
               
-           
+              <label for="address" class="form-label">Current Location</label>
+              <input type="text" class="form-control" name="address" placeholder="Jln.Mutiara, Gading Serpong" required>
+
+              <label for="skills" class="form-label">Skills <span class="text-muted"></span></label>
+              <input type="text" class="form-control" name="skills"  placeholder="leadership experience, computer proficiency" required>
+
+              <label for="langguages" class="form-label">Langguages<span class="text-muted"></span></label>
+              <input type="text" class="form-control" name="langguages"  placeholder="English, Bahasa">
+            </div>
+
+            
+            <div class="col-sm-6">
+
+              <label for="AboutMe" class="form-label">About Me<span class="text-muted"></span></label>
+              <textarea style="height:100px" type="text" class="form-control" name="AboutMe"  
+              placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
+            
+             <label for="education" class="form-label">Education<span class="text-muted"></span></label>
+             <textarea style="height:100px" type="text" class="form-control" name="education"  
+             placeholder="Universitas Multimedia Nusantara &#10; Bachelor Degree &#10; Year 2015  &#10;  &#10;Universitas Multimedia Nusantara &#10; Master Degree &#10; Year 2020"></textarea>
+
+             <label for="exp" class="form-label">Experience<span class="text-muted"></span></label>
+             <textarea style="height:100px" type="text" class="form-control" name="exp"  
+             placeholder="PT.Name &#10; Junior Programmer &#10; 2021-Present &#10; &#10;PT.Name &#10; Junior Programmer &#10; 2021-Present"></textarea>
+              
+             <br>
+
+             <label for="img" class="form-label">Select Profile Image:</label>
+             <input type="file" id="img" name="img" accept="image/*">
+            </div>
+                  
             </div>
           </div>
 
           <hr class="my-4">
-         <!-- <div class="col-sm-6" >
-          <button class="button b1" type="submit">Cancel</button>
-          </div>-->
-          <div class="col text-center">
-            <button class="button b1" type="submit">Cancel</button>
-            <button class="button b2" type="submit">Apply</button>
-           <!--  <button class="w-100 btn btn-primary btn-lg b2" type="submit">Apply</button> -->
-            </div>
-          
+           <div class="col text-center">
+             <button class="button btncancel" type="submit">Cancel</button>
+             <button class="button btnapply" type="submit">Apply</button>
+             </div>       
         </form>
 
     </div>
@@ -205,11 +194,8 @@
 
 
 </div>
-
-
     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-      <script src="form-validation.js"></script>
+    <script src="form-validation.js"></script>
   </body>
 </html>
 

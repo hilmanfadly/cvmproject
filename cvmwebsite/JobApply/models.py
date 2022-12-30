@@ -14,6 +14,7 @@ class JA(models.Model):
     about_me = models.CharField(max_length=200)
     education = models.CharField(max_length=200)
     experience = models.CharField(max_length=200)
+    img =models.ImageField(upload_to ='images/')
 
     def __str__(self):
         return self.first_name
