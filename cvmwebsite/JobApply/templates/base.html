@@ -101,12 +101,16 @@
       <img src="https://i.postimg.cc/qq0FCfXZ/umnP.png" alt"Logo UMN Pictures" width="160" height="80"/>
     </div>
     <div class="col-sm-6">
+      {% if user.is_authenticated %}
       <button class="fa fa-user topright" onclick="myFunction()"</button>
         <div id="Dropdown" class="dropdown-content">
+          <a class="dropdown-item" style="color:#000000;text-decoration:none;" href="#home">Logout</a>
+          {% else %}
           <a class="dropdown-item" style="color:#000000;text-decoration:none;" href="#home">Login</a>
           <br>
           <a class="dropdown-item" style="color:#000000;text-decoration:none;" href="#about">Sign Up</a>
         </div>
+        {% endif %}
     </div>
     <script>
       function myFunction() {
